@@ -1,0 +1,13 @@
+[Unit]
+Description=radarrsync - sync 2 instances of radarr
+Documentation=https://github.com/johnnythrash/radarrsync
+After=network.target
+
+[Service]
+Type=simple
+User= username
+ExecStart=/usr/bin/node /path/to/radarrsync/radarrsync.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
