@@ -52,7 +52,7 @@ included in this directory is `radarrsync.service` for running this app as a sys
 
 ### configuration file
 running `setup.js` will create a `config.json` file in the root of this project to be used by the app. 
-```json 
+``` 
 {
 	"radarrKey": "regular radarr api key",
 	"radarrIp": "regular radarr url:port (default: http://localhost:7878)", 
