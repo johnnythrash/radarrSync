@@ -6,7 +6,7 @@ After=network.target
 [Service]
 Type=simple
 User= username
-ExecStart=/usr/bin/node /path/to/radarrsync/radarrsync.js
+ExecStart=/usr/bin/node /path/to/radarrsync/index.js
 Restart=on-failure
 
 [Install]
