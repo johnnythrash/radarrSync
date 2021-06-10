@@ -42,9 +42,15 @@ try {
 	if (fs.existsSync(path)) {
 
 	}
-	else { fs.writeFileSync(path,'') }
-} catch (err) {
-	info(err.message)
+	else { 
+		fs.writeFileSync(path,'') }
+		error("logfile doesn't exist, creating now")
+	} catch (err) {
+		if (error.message = "ENOENT: no such file or directory, open './logs/radarrsync.log'"){
+			fs.mkdir('./logs', e=>e)
+			error("logs directory doesn't exist, creating now...")
+		} else 
+		 {error(err.message)}
 }
 
 
