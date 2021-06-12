@@ -5,9 +5,8 @@ const movie = require('./utils/moviehelper')
 const logger = require('./utils/logger')
 const app = express()
 
-
-
 try {
+	
 	fs.readFileSync('./config.json')
 } catch (err) {
 	throw new Error("error! did you remember to create a config.json file?")

@@ -39,13 +39,12 @@ const error = (message) => {
 
 const path = './logs/radarrsync.log'
 try {
-	if (fs.existsSync(path)) {
-
-	}
-	else { 
-		fs.writeFileSync(path,'') }
+	if(!fs.existsSync(path)){
+		fs.writeFileSync(path,'') 
 		error("logfile doesn't exist, creating now")
-	} catch (err) {
+	}
+		
+	 }catch (err) {
 		if (error.message = "ENOENT: no such file or directory, open './logs/radarrsync.log'"){
 			fs.mkdir('./logs', e=>e)
 			error("logs directory doesn't exist, creating now...")
