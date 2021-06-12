@@ -7,6 +7,7 @@ After=network.target
 Type=simple
 User= username
 ExecStart=/usr/bin/node /path/to/radarrsync/index.js
+WokringDirectory=/path/to/radarrsync
 Restart=on-failure
 
 [Install]
